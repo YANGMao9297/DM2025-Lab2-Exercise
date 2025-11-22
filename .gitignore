@@ -4,4 +4,4 @@ config/.env
 .venv/
 *.bin
 *.gz
-brain-to-text/config_genai/.env
+brain-to-text/config_genai/
