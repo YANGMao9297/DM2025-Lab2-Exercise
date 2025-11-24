@@ -1,0 +1,206 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">key_concept</span> <span class="lx-label" style="background-color:#C8E6C9;">practical_insight</span> <span class="lx-label" style="background-color:#FEF0C3;">teaching_example</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        # LECTURE ANALYSIS: Types of Data Sets
+## Video Segment: 117:30 - 120:59
+
+[SLIDE DESCRIPTION]
+The slide shows a quiz result with a high score of 90%, a low score of 57%, a standard deviation of 0.06, and an average time of 01:33. It also shows a question breakdown with a bar chart indicating the distribution of scores. The question is: &quot;Which of the following characteristics are commonly associated with Data Matrix? (Choose all that apply)&quot;. The options are: &quot;Consist of numerical values&quot; (97% correct), &quot;Often organized in a tabular format&quot; (92% correct), &quot;May contain unstructured text data&quot; (8% correct), and &quot;Primarily used for statistical analysis and machine learning models&quot; (92% correct). Below this, it states &quot;Attempts: 50 out of 50.&quot;
+
+[TRANSCRIPT - 117:39]
+name because the time. Sorry, I probably cannot wait. So, again, here is just like a summary for the data matrix data set right here. About data metrics dataset. What is a characteristic about uh uh about <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">data matrix dataset</span>? First, you need to know they are consist of numerical value. Often organized in a tabular format. And they don&#x27;t have unstructured data. They don&#x27;t. They will not have unstructured data. And they can utilize a lot of statistic method and machine learning way to working with that. <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">If you took machine learning course, usually they assume the data already been convert into data matrix.</span> They usually consider about that. <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">So a lot of machine learning are starting from matrix operation.</span> <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">So then because of it, your data need to go through the preprocessing to convert them to corresponding data matrix.</span> <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">They are not structured data. They can contain the paragraphs, sentences and words. In order for you to convert them to a matrix site, but then originally they are paragraph and the sentence and words.</span> <span class="lx-highlight" data-idx="5" style="background-color:#D2E3FC;">And</span> then they might need some natural language processing NLP technique for you to convert them. <span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">And like after 2013, we have large language model, we can utilize that way to convert to it.</span> And then we usually before 2013, people try to talking about them is called information retrieval. So you need some text analysis try to working with that. And that is difference between the document and data and data matrix data.
+
+[SLIDE DESCRIPTION]
+The slide displays a table with columns for TID, Items. The rows show: TID 1 (Beer, Bread, Coke, Milk), TID 2 (Beer, Bread), TID 3 (Coke, Diaper, Milk), TID 4 (Beer, Bread). The title of the slide is &quot;<span class="lx-highlight" data-idx="7" style="background-color:#D2E3FC;">Transaction Data</span>&quot; and it has a subtitle &quot;A special type of record, where Each record (transaction) involves a set of items.&quot;
+
+[TRANSCRIPT - 119:30]
+Next, we have transaction data. <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">Transaction data are particularly important if you want working with association rule, association rule.</span> <span class="lx-highlight" data-idx="9" style="background-color:#FEF0C3;">So for example, you went to 7-11, you purchase certain item. And those item will be keep in one transaction.</span> And why we call them transaction is because how the item appear in the transaction. <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">We don&#x27;t care about the order. So the bread, Coke, Milk, if you do Milk, Coke, Coke and Bread, they are the same. So then we don&#x27;t care about order in transaction.</span> So for example, the world wide web, they are <span class="lx-highlight" data-idx="11" style="background-color:#D2E3FC;">graph data</span>. So the graph data means certain graph analysis. Uh, if you don&#x27;t really have time to talking about how to analyze the graph, if you interested in there, you actually can took some courses, like the graph network, thing like that, and then we&#x27;re talking so much about how to working with that. And then we also have the something we call them <span class="lx-highlight" data-idx="12" style="background-color:#D2E3FC;">ordered data</span>. The data have the order.
+
+[SLIDE DESCRIPTION]
+The slide shows three types of data sets: Graph (with an image of linked web pages and a benzene molecule), Ordered (with bullet points: Spatial Data, Temporal Data, Sequential Data, Genetic Sequence Data), and a section titled &quot;Types of Data Sets&quot; with a graph icon and &quot;World Wide Web&quot; listed below it.
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="12" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/13</span> |
+          Pos <span id="posInfo">[977-996]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "key_concept", "text": "data matrix dataset", "color": "#D2E3FC", "startPos": 977, "endPos": 996, "beforeText": "o, again, here is just like a summary for the data matrix data set right here. About data metrics dataset. What is a characteristic about uh uh about ", "extractionText": "data matrix dataset", "afterText": "? First, you need to know they are consist of numerical value. Often organized in a tabular format. And they don&#x27;t have unstructured data. They don&#x27;t.", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Data Matrix Dataset</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">A dataset that consists of numerical values, often organized in a tabular format, and is primarily used for statistical analysis and machine learning models.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">A table of numbers used for math and AI.</span>}</div>"}, {"index": 1, "class": "practical_insight", "text": "If you took machine learning course, usually they assume the data already been convert into data matrix.", "color": "#C8E6C9", "startPos": 1279, "endPos": 1383, "beforeText": "data. They don&#x27;t. They will not have unstructured data. And they can utilize a lot of statistic method and machine learning way to working with that. ", "extractionText": "If you took machine learning course, usually they assume the data already been convert into data matrix.", "afterText": " They usually consider about that. So a lot of machine learning are starting from matrix operation. So then because of it, your data need to go throug", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Critical Importance</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Data Matrix Dataset</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Machine learning courses often expect data to be in a matrix format.</span>}</div>"}, {"index": 2, "class": "practical_insight", "text": "So a lot of machine learning are starting from matrix operation.", "color": "#C8E6C9", "startPos": 1418, "endPos": 1482, "beforeText": "with that. If you took machine learning course, usually they assume the data already been convert into data matrix. They usually consider about that. ", "extractionText": "So a lot of machine learning are starting from matrix operation.", "afterText": " So then because of it, your data need to go through the preprocessing to convert them to corresponding data matrix. They are not structured data. The", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Critical Importance</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Data Matrix Dataset</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Matrix operations are fundamental to many machine learning processes.</span>}</div>"}, {"index": 3, "class": "practical_insight", "text": "So then because of it, your data need to go through the preprocessing to convert them to corresponding data matrix.", "color": "#C8E6C9", "startPos": 1483, "endPos": 1598, "beforeText": "me the data already been convert into data matrix. They usually consider about that. So a lot of machine learning are starting from matrix operation. ", "extractionText": "So then because of it, your data need to go through the preprocessing to convert them to corresponding data matrix.", "afterText": " They are not structured data. They can contain the paragraphs, sentences and words. In order for you to convert them to a matrix site, but then origi", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Best Practice</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Data Matrix Dataset</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Data must be preprocessed into a matrix format for machine learning.</span>}</div>"}, {"index": 4, "class": "key_concept", "text": "They are not structured data. They can contain the paragraphs, sentences and words. In order for you to convert them to a matrix site, but then originally they are paragraph and the sentence and words.", "color": "#D2E3FC", "startPos": 1599, "endPos": 1800, "beforeText": "e starting from matrix operation. So then because of it, your data need to go through the preprocessing to convert them to corresponding data matrix. ", "extractionText": "They are not structured data. They can contain the paragraphs, sentences and words. In order for you to convert them to a matrix site, but then originally they are paragraph and the sentence and words.", "afterText": " And then they might need some natural language processing NLP technique for you to convert them. And like after 2013, we have large language model, w", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Unstructured Data Conversion</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Unstructured data, such as paragraphs, sentences, and words, needs to be converted into a matrix format for certain analyses.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Intermediate</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Text needs to be turned into numbers in a table before computers can do math or AI on it.</span>}</div>"}, {"index": 5, "class": "key_concept", "text": "And they might need some natural language processing NLP technique for you to convert them.", "color": "#D2E3FC", "startPos": 1801, "endPos": 1804, "beforeText": "aragraphs, sentences and words. In order for you to convert them to a matrix site, but then originally they are paragraph and the sentence and words. ", "extractionText": "And", "afterText": " then they might need some natural language processing NLP technique for you to convert them. And like after 2013, we have large language model, we ca", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Natural Language Processing (NLP)</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Techniques used to convert unstructured text data into a format suitable for analysis, such as a data matrix.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Intermediate</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Special computer methods to understand and change human language into a format computers can use.</span>}</div>"}, {"index": 6, "class": "key_concept", "text": "And like after 2013, we have large language model, we can utilize that way to convert to it.", "color": "#D2E3FC", "startPos": 1898, "endPos": 1990, "beforeText": "nally they are paragraph and the sentence and words. And then they might need some natural language processing NLP technique for you to convert them. ", "extractionText": "And like after 2013, we have large language model, we can utilize that way to convert to it.", "afterText": " And then we usually before 2013, people try to talking about them is called information retrieval. So you need some text analysis try to working with", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Large Language Models (LLMs)</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Advanced models, developed after 2013, that can be utilized for converting text data into matrix formats.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Advanced</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Powerful AI tools, created after 2013, that help turn text into usable data for computers.</span>}</div>"}, {"index": 7, "class": "key_concept", "text": "transaction data", "color": "#D2E3FC", "startPos": 2444, "endPos": 2460, "beforeText": "ems. The rows show: TID 1 (Beer, Bread, Coke, Milk), TID 2 (Beer, Bread), TID 3 (Coke, Diaper, Milk), TID 4 (Beer, Bread). The title of the slide is &quot;", "extractionText": "Transaction Data", "afterText": "&quot; and it has a subtitle &quot;A special type of record, where Each record (transaction) involves a set of items.&quot;\n\n[TRANSCRIPT - 119:30]\nNext, we have tran", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Transaction Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">A special type of record, where Each record (transaction) involves a set of items.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Data where each entry is a collection of items, and the order of items within the collection doesn&#x27;t matter.</span>}</div>"}, {"index": 8, "class": "practical_insight", "text": "Transaction data are particularly important if you want working with association rule, association rule.", "color": "#C8E6C9", "startPos": 2624, "endPos": 2728, "beforeText": " subtitle &quot;A special type of record, where Each record (transaction) involves a set of items.&quot;\n\n[TRANSCRIPT - 119:30]\nNext, we have transaction data. ", "extractionText": "Transaction data are particularly important if you want working with association rule, association rule.", "afterText": " So for example, you went to 7-11, you purchase certain item. And those item will be keep in one transaction. And why we call them transaction is beca", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Critical Importance</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Transaction Data</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Transaction data is crucial for analyzing association rules.</span>}</div>"}, {"index": 9, "class": "teaching_example", "text": "So for example, you went to 7-11, you purchase certain item. And those item will be keep in one transaction.", "color": "#FEF0C3", "startPos": 2729, "endPos": 2837, "beforeText": "PT - 119:30]\nNext, we have transaction data. Transaction data are particularly important if you want working with association rule, association rule. ", "extractionText": "So for example, you went to 7-11, you purchase certain item. And those item will be keep in one transaction.", "afterText": " And why we call them transaction is because how the item appear in the transaction. We don&#x27;t care about the order. So the bread, Coke, Milk, if you d", "attributesHtml": "<div><strong>class:</strong> teaching_example</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">example_context</span>: <span class=\"lx-attr-value\">So for example, you went to 7-11, you purchase certain item. And those item will be keep in one transaction.</span>, <span class=\"lx-attr-key\">concept_illustrated</span>: <span class=\"lx-attr-value\">Transaction Data</span>, <span class=\"lx-attr-key\">instructor_emphasis</span>: <span class=\"lx-attr-value\">Provides a relatable real-world scenario (shopping at 7-11) to explain transaction data.</span>}</div>"}, {"index": 10, "class": "practical_insight", "text": "We don't care about the order. So the bread, Coke, Milk, if you do Milk, Coke, Coke and Bread, they are the same. So then we don't care about order in transaction.", "color": "#C8E6C9", "startPos": 2922, "endPos": 3085, "beforeText": "ase certain item. And those item will be keep in one transaction. And why we call them transaction is because how the item appear in the transaction. ", "extractionText": "We don&#x27;t care about the order. So the bread, Coke, Milk, if you do Milk, Coke, Coke and Bread, they are the same. So then we don&#x27;t care about order in transaction.", "afterText": " So for example, the world wide web, they are graph data. So the graph data means certain graph analysis. Uh, if you don&#x27;t really have time to talking", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Best Practice</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Transaction Data</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">In transaction data, the order of items within a transaction is irrelevant.</span>}</div>"}, {"index": 11, "class": "key_concept", "text": "graph data", "color": "#D2E3FC", "startPos": 3131, "endPos": 3141, "beforeText": " you do Milk, Coke, Coke and Bread, they are the same. So then we don&#x27;t care about order in transaction. So for example, the world wide web, they are ", "extractionText": "graph data", "afterText": ". So the graph data means certain graph analysis. Uh, if you don&#x27;t really have time to talking about how to analyze the graph, if you interested in th", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Graph Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data that represents entities and the relationships between them, forming a graph structure.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Intermediate</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Data structured as nodes (entities) and edges (connections between entities), like social networks or web links.</span>}</div>"}, {"index": 12, "class": "key_concept", "text": "ordered data", "color": "#D2E3FC", "startPos": 3485, "endPos": 3497, "beforeText": "e the graph network, thing like that, and then we&#x27;re talking so much about how to working with that. And then we also have the something we call them ", "extractionText": "ordered data", "afterText": ". The data have the order.\n\n[SLIDE DESCRIPTION]\nThe slide shows three types of data sets: Graph (with an image of linked web pages and a benzene molec", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Ordered Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Data where the sequence or order of elements is significant.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Data where the order matters, such as time series or sequences.</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>

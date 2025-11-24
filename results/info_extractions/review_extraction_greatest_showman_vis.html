@@ -1,0 +1,273 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Movie Review: The Greatest Showman is Built on a 
+House of Lies — But It’s Entertaining as Hell! 
+2016’s The Founder took <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">a pretty incisive and honest look</span> at the American Dream. It wasn’t afraid to 
+peer at the <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">shitty underbelly of success</span> and note that it often owes as much to hard work and 
+innovation as it does to back-stabbing and moral compromise. Hugh Jackman’s The Greatest 
+Showman also takes a look at the American Dream — but it comes to a very different conclusion, 
+which is that the American Dream is a wonderful, joyous thing! 
+The Greatest Showman re-imagines the life of consummate huckster P.T. Barnum as a <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">sparkling feel-
+good pop musical</span> that <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">celebrates a quintessential American success story</span>: the rise of a rags-to-riches 
+visionary who makes it to the top through the power of dreaming big and never giving up. Along the 
+way he helps a band of outcasts feel like they belong and have a place in this world. <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">Wrapped in a 
+bubble gum sheathe of razzle-dazzle, catchy songs and elaborately choreographed dance sequences</span>, 
+the movie is <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">a testament to the empty spectacle of American showbusiness’s love affair with itself</span>. 
+The film goes straight to the Disney/Dickens template of the poor orphan boy with big dreams who is 
+challenged by a disapproving society and arrogant elites, only to overcome these trials with a rag-tag 
+band of misfits and become the greatest showman of them all. The film’s smash hit anthem, “This is 
+Me”, is a full-throated declaration that it’s OK to be different (like if you are a woman and have a beard) 
+and celebrates the bravery of embracing your quirks even in the face of a society that doesn’t accept 
+you. It’s <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">a fine uplifting message</span> and <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">the song is catchy as hell</span>. But I have one small problem with it, 
+along with the rest of the themes buoying this film. <span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">It’s all based on dastardly lies!</span> 
+The real P.T. Barnum was not a Nicholas Nickleby stand-in for the aspirations of big dreamers in the 
+lower and middle classes. <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">He was a huckster, an exploitative charlatan and a snake-oil salesman.</span> His 
+true visionary genius was in realizing that there was an enormous market of gullible Americans out 
+there waiting to be dazzled by the bizarre and the macabre and taken in by elaborate and shocking 
+hoaxes. Famously, one of his first claims to fame was when he sewed the head and torso of a monkey 
+to the tail of a fish and called it a mermaid. This anecdote was conveniently omitted from the film for 
+some reason. It also glossed over the fact that Barnum began his career by purchasing a blind, 
+paralyzed slave woman and then put her on exhibition and claimed she was the 161-year-old nurse of 
+George Washington. 
+Now, I am not really a fan of retroactively judging people who lived centuries ago by the moral 
+standards of our time. But even a cursory look at Barnum’s real biography makes it painfully obvious 
+that <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">his success came from a willingness to exploit and defraud people.</span> <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">His shows were not 
+celebrations of unique identity in a conformist world.</span> <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">They were a chance for him to extract money</span>
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+from hulking idiots in exchange for letting them gawk at people suffering from gigantism and other 
+maladies. When a regular case of dwarfism was deemed not thrilling or obscene enough, he had no 
+compunctions about defrauding his audience with trickery (this is hinted at in the film, but is played 
+off as an endearingly rueful character trait). 
+<span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">The man was a straight-up fraudster.</span> And he parlayed this talent into one of the great American myths 
+of our time — the archetype of the consummate showman, the visionary genius who uses his 
+marketing acumen and his showmanship and his charisma and his drive and his dreams to create 
+brand new markets out of whole cloth that didn’t exist before. And this myth is fine, as far as it goes — 
+but it leaves out a crucial element which is that along with all that, <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">the consummate showman is 
+exploiting people at every turn.</span> In Barnum’s case he exploited the buttoned-down 19th century social 
+desire to be scandalized and titillated, he exploited the gullibility of the public, and he exploited the 
+people working for him by putting them on display so that people could ogle what were often serious 
+medical conditions in exchange for money. 
+The film steers clear of any of these issues, and instead just <span class="lx-highlight" data-idx="15" style="background-color:#C8E6C9;">aims to dazzle us with spectacle</span>. And I 
+have to say — <span class="lx-highlight" data-idx="16" style="background-color:#D2E3FC;">the spectacle is a hell of a lot of fun</span>! At its heart this is <span class="lx-highlight" data-idx="17" style="background-color:#C8E6C9;">a damn entertaining, fun piece of 
+theater</span> and though it totally re-imagines Barnum, avoiding the controversy and the interesting bits in 
+order to give us a paint-by-numbers protagonist we can cheer for, <span class="lx-highlight" data-idx="18" style="background-color:#C8E6C9;">it does succeed as a slick musical</span>. 
+I prefer musicals in the style of Fred Astaire and Gene Kelley, where the camera would just roll and 
+shoot long takes intended to capture the magic of those guys when they moved. But you can’t expect 
+that in a modern musical, I suppose, and all <span class="lx-highlight" data-idx="19" style="background-color:#C8E6C9;">the hyper-kinetic quick cuts (probably to obscure the real 
+dancing ability of the stars) were in line with the overall spastic energy and momentum of the film</span>. <span class="lx-highlight" data-idx="20" style="background-color:#C8E6C9;">The 
+soundtrack is diabolically good</span>, and <span class="lx-highlight" data-idx="21" style="background-color:#C8E6C9;">the choreography excellent</span>. There is even a cameo as a 
+mustached bartender from Daniel “Cloud” Campos, probably the best dancer in the world, who 
+helped Jackman train for the part. <span class="lx-highlight" data-idx="22" style="background-color:#C8E6C9;">The period setting is superb</span> (and I am a sucker for a good period 
+piece). 
+The Greatest Showman is thus <span class="lx-highlight" data-idx="23" style="background-color:#C8E6C9;">loads of fun</span>. <span class="lx-highlight" data-idx="24" style="background-color:#C8E6C9;">It’s energetic, it’s uplifting, it has great music and great 
+sequences</span>. <span class="lx-highlight" data-idx="25" style="background-color:#C8E6C9;">It is also hagiographic revisionism, to be sure, that avoids engaging with the reality of 
+Barnum’s life in any meaningful way</span>. <span class="lx-highlight" data-idx="26" style="background-color:#D2E3FC;">I felt this was a missed opportunity</span>, especially since we are 
+currently living in an age where a huckster embodying many of the same traits that made Barnum 
+legendary has defrauded his way into the White House by selling the American people the same kind 
+of bunkum that Barnum peddled. It’s <span class="lx-highlight" data-idx="27" style="background-color:#C8E6C9;">amazing how little some fundamental aspects of American 
+society have changed over the centuries</span>, how <span class="lx-highlight" data-idx="28" style="background-color:#C8E6C9;">we are still susceptible to manipulative hustlers</span> as long 
+as they conceal their true intent under a veneer of compelling showmanship. <span class="lx-highlight" data-idx="29" style="background-color:#C8E6C9;">We love to swallow that 
+bullshit as long as it’s shiny enough</span>, and indeed even <span class="lx-highlight" data-idx="30" style="background-color:#D2E3FC;">I found myself willing to more or less ignore the 
+film’s distortions of the truth because it entertained the hell out of me for two hours</span>. This <span class="lx-highlight" data-idx="31" style="background-color:#C8E6C9;">peculiar</span>
+&quot;&quot;&quot;
+
+**Page 3**
+&quot;&quot;&quot;
+weakness of the American mind to ignore uncomfortable truths as long as we are being dazzled and 
+entertained and stupefied — <span class="lx-highlight" data-idx="32" style="background-color:#C8E6C9;">THAT would have been a really interesting road for the film to explore</span>. 
+But <span class="lx-highlight" data-idx="33" style="background-color:#C8E6C9;">alas, it did not</span> and <span class="lx-highlight" data-idx="34" style="background-color:#C8E6C9;">in the end we just have to content ourselves with hearing “This is Me” played on 
+the radio every twenty fucking minutes for the rest of our lives</span>.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="34" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/35</span> |
+          Pos <span id="posInfo">[137-170]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "a pretty incisive and honest look", "color": "#C8E6C9", "startPos": 137, "endPos": 170, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nMovie Review: The Greatest Showman is Built on a \nHouse of Lies \u2014 But It\u2019s Entertaining as Hell! \n2016\u2019s The Founder took ", "extractionText": "a pretty incisive and honest look", "afterText": " at the American Dream. It wasn\u2019t afraid to \npeer at the shitty underbelly of success and note that it often owes as much to hard work and \ninnovation", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Founder</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">pretty incisive and honest</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "shitty underbelly of success", "color": "#C8E6C9", "startPos": 227, "endPos": 255, "beforeText": "s \u2014 But It\u2019s Entertaining as Hell! \n2016\u2019s The Founder took a pretty incisive and honest look at the American Dream. It wasn\u2019t afraid to \npeer at the ", "extractionText": "shitty underbelly of success", "afterText": " and note that it often owes as much to hard work and \ninnovation as it does to back-stabbing and moral compromise. Hugh Jackman\u2019s The Greatest \nShowm", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Success</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">shitty underbelly</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "sparkling feel-good pop musical", "color": "#C8E6C9", "startPos": 642, "endPos": 674, "beforeText": "n, \nwhich is that the American Dream is a wonderful, joyous thing! \nThe Greatest Showman re-imagines the life of consummate huckster P.T. Barnum as a ", "extractionText": "sparkling feel-\ngood pop musical", "afterText": " that celebrates a quintessential American success story: the rise of a rags-to-riches \nvisionary who makes it to the top through the power of dreamin", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Greatest Showman</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">sparkling feel-good</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "celebrates a quintessential American success story", "color": "#C8E6C9", "startPos": 680, "endPos": 730, "beforeText": "s a wonderful, joyous thing! \nThe Greatest Showman re-imagines the life of consummate huckster P.T. Barnum as a sparkling feel-\ngood pop musical that ", "extractionText": "celebrates a quintessential American success story", "afterText": ": the rise of a rags-to-riches \nvisionary who makes it to the top through the power of dreaming big and never giving up. Along the \nway he helps a ban", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Greatest Showman</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">quintessential American success story</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "Wrapped in a bubble gum sheathe of razzle-dazzle, catchy songs and elaborately choreographed dance sequences", "color": "#C8E6C9", "startPos": 948, "endPos": 1057, "beforeText": "rough the power of dreaming big and never giving up. Along the \nway he helps a band of outcasts feel like they belong and have a place in this world. ", "extractionText": "Wrapped in a \nbubble gum sheathe of razzle-dazzle, catchy songs and elaborately choreographed dance sequences", "afterText": ", \nthe movie is a testament to the empty spectacle of American showbusiness\u2019s love affair with itself. \nThe film goes straight to the Disney/Dickens t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">razzle-dazzle, catchy songs and elaborately choreographed dance sequences</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "a testament to the empty spectacle of American showbusiness\u2019s love affair with itself", "color": "#C8E6C9", "startPos": 1073, "endPos": 1158, "beforeText": "e a place in this world. Wrapped in a \nbubble gum sheathe of razzle-dazzle, catchy songs and elaborately choreographed dance sequences, \nthe movie is ", "extractionText": "a testament to the empty spectacle of American showbusiness\u2019s love affair with itself", "afterText": ". \nThe film goes straight to the Disney/Dickens template of the poor orphan boy with big dreams who is \nchallenged by a disapproving society and arrog", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The movie</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">empty spectacle</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "a fine uplifting message", "color": "#C8E6C9", "startPos": 1688, "endPos": 1712, "beforeText": "f you are a woman and have a beard) \nand celebrates the bravery of embracing your quirks even in the face of a society that doesn\u2019t accept \nyou. It\u2019s ", "extractionText": "a fine uplifting message", "afterText": " and the song is catchy as hell. But I have one small problem with it, \nalong with the rest of the themes buoying this film. It\u2019s all based on dastard", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The message</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fine uplifting</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "the song is catchy as hell", "color": "#C8E6C9", "startPos": 1717, "endPos": 1743, "beforeText": "beard) \nand celebrates the bravery of embracing your quirks even in the face of a society that doesn\u2019t accept \nyou. It\u2019s a fine uplifting message and ", "extractionText": "the song is catchy as hell", "afterText": ". But I have one small problem with it, \nalong with the rest of the themes buoying this film. It\u2019s all based on dastardly lies! \nThe real P.T. Barnum ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The song</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">catchy as hell</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "It\u2019s all based on dastardly lies!", "color": "#C8E6C9", "startPos": 1837, "endPos": 1870, "beforeText": " a fine uplifting message and the song is catchy as hell. But I have one small problem with it, \nalong with the rest of the themes buoying this film. ", "extractionText": "It\u2019s all based on dastardly lies!", "afterText": " \nThe real P.T. Barnum was not a Nicholas Nickleby stand-in for the aspirations of big dreamers in the \nlower and middle classes. He was a huckster, a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film&#x27;s themes</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">dastardly lies</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "He was a huckster, an exploitative charlatan and a snake-oil salesman.", "color": "#C8E6C9", "startPos": 2000, "endPos": 2070, "beforeText": "d on dastardly lies! \nThe real P.T. Barnum was not a Nicholas Nickleby stand-in for the aspirations of big dreamers in the \nlower and middle classes. ", "extractionText": "He was a huckster, an exploitative charlatan and a snake-oil salesman.", "afterText": " His \ntrue visionary genius was in realizing that there was an enormous market of gullible Americans out \nthere waiting to be dazzled by the bizarre a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Barnum</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">huckster, an exploitative charlatan and a snake-oil salesman</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "his success came from a willingness to exploit and defraud people.", "color": "#C8E6C9", "startPos": 2900, "endPos": 2966, "beforeText": "ople who lived centuries ago by the moral \nstandards of our time. But even a cursory look at Barnum\u2019s real biography makes it painfully obvious \nthat ", "extractionText": "his success came from a willingness to exploit and defraud people.", "afterText": " His shows were not \ncelebrations of unique identity in a conformist world. They were a chance for him to extract money\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nfrom hulki", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Barnum&#x27;s success</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">willingness to exploit and defraud people</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "His shows were not celebrations of unique identity in a conformist world.", "color": "#C8E6C9", "startPos": 2967, "endPos": 3041, "beforeText": "ut even a cursory look at Barnum\u2019s real biography makes it painfully obvious \nthat his success came from a willingness to exploit and defraud people. ", "extractionText": "His shows were not \ncelebrations of unique identity in a conformist world.", "afterText": " They were a chance for him to extract money\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nfrom hulking idiots in exchange for letting them gawk at people suffering from gigant", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">His shows</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not celebrations of unique identity</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "They were a chance for him to extract money", "color": "#C8E6C9", "startPos": 3042, "endPos": 3085, "beforeText": "s \nthat his success came from a willingness to exploit and defraud people. His shows were not \ncelebrations of unique identity in a conformist world. ", "extractionText": "They were a chance for him to extract money", "afterText": "\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nfrom hulking idiots in exchange for letting them gawk at people suffering from gigantism and other \nmaladies. When a regular case", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">His shows</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">chance for him to extract money</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "The man was a straight-up fraudster.", "color": "#C8E6C9", "startPos": 3455, "endPos": 3491, "beforeText": "mpunctions about defrauding his audience with trickery (this is hinted at in the film, but is played \noff as an endearingly rueful character trait). \n", "extractionText": "The man was a straight-up fraudster.", "afterText": " And he parlayed this talent into one of the great American myths \nof our time \u2014 the archetype of the consummate showman, the visionary genius who use", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Barnum</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">straight-up fraudster</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "the consummate showman is exploiting people at every turn.", "color": "#C8E6C9", "startPos": 3920, "endPos": 3979, "beforeText": "le cloth that didn\u2019t exist before. And this myth is fine, as far as it goes \u2014 \nbut it leaves out a crucial element which is that along with all that, ", "extractionText": "the consummate showman is \nexploiting people at every turn.", "afterText": " In Barnum\u2019s case he exploited the buttoned-down 19th century social \ndesire to be scandalized and titillated, he exploited the gullibility of the pub", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The consummate showman</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">exploiting people at every turn</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "aims to dazzle us with spectacle", "color": "#C8E6C9", "startPos": 4363, "endPos": 4395, "beforeText": " people could ogle what were often serious \nmedical conditions in exchange for money. \nThe film steers clear of any of these issues, and instead just ", "extractionText": "aims to dazzle us with spectacle", "afterText": ". And I \nhave to say \u2014 the spectacle is a hell of a lot of fun! At its heart this is a damn entertaining, fun piece of \ntheater and though it totally ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">dazzle us with spectacle</span>}</div>"}, {"index": 16, "class": "audience_impact", "text": "the spectacle is a hell of a lot of fun", "color": "#D2E3FC", "startPos": 4418, "endPos": 4457, "beforeText": "ditions in exchange for money. \nThe film steers clear of any of these issues, and instead just aims to dazzle us with spectacle. And I \nhave to say \u2014 ", "extractionText": "the spectacle is a hell of a lot of fun", "afterText": "! At its heart this is a damn entertaining, fun piece of \ntheater and though it totally re-imagines Barnum, avoiding the controversy and the interesti", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">fun</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The spectacle</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">us</span>}</div>"}, {"index": 17, "class": "opinion_statement", "text": "a damn entertaining, fun piece of theater", "color": "#C8E6C9", "startPos": 4480, "endPos": 4522, "beforeText": "f these issues, and instead just aims to dazzle us with spectacle. And I \nhave to say \u2014 the spectacle is a hell of a lot of fun! At its heart this is ", "extractionText": "a damn entertaining, fun piece of \ntheater", "afterText": " and though it totally re-imagines Barnum, avoiding the controversy and the interesting bits in \norder to give us a paint-by-numbers protagonist we ca", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">This</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">damn entertaining, fun</span>}</div>"}, {"index": 18, "class": "opinion_statement", "text": "it does succeed as a slick musical", "color": "#C8E6C9", "startPos": 4685, "endPos": 4719, "beforeText": "t totally re-imagines Barnum, avoiding the controversy and the interesting bits in \norder to give us a paint-by-numbers protagonist we can cheer for, ", "extractionText": "it does succeed as a slick musical", "afterText": ". \nI prefer musicals in the style of Fred Astaire and Gene Kelley, where the camera would just roll and \nshoot long takes intended to capture the magi", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">it</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">slick musical</span>}</div>"}, {"index": 19, "class": "opinion_statement", "text": "the hyper-kinetic quick cuts (probably to obscure the real dancing ability of the stars) were in line with the overall spastic energy and momentum of the film", "color": "#C8E6C9", "startPos": 4969, "endPos": 5128, "beforeText": "and \nshoot long takes intended to capture the magic of those guys when they moved. But you can\u2019t expect \nthat in a modern musical, I suppose, and all ", "extractionText": "the hyper-kinetic quick cuts (probably to obscure the real \ndancing ability of the stars) were in line with the overall spastic energy and momentum of the film", "afterText": ". The \nsoundtrack is diabolically good, and the choreography excellent. There is even a cameo as a \nmustached bartender from Daniel \u201cCloud\u201d Campos, pr", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the hyper-kinetic quick cuts</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">spastic energy and momentum</span>}</div>"}, {"index": 20, "class": "opinion_statement", "text": "The soundtrack is diabolically good", "color": "#C8E6C9", "startPos": 5130, "endPos": 5166, "beforeText": "inetic quick cuts (probably to obscure the real \ndancing ability of the stars) were in line with the overall spastic energy and momentum of the film. ", "extractionText": "The \nsoundtrack is diabolically good", "afterText": ", and the choreography excellent. There is even a cameo as a \nmustached bartender from Daniel \u201cCloud\u201d Campos, probably the best dancer in the world, w", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The soundtrack</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">diabolically good</span>}</div>"}, {"index": 21, "class": "opinion_statement", "text": "the choreography excellent", "color": "#C8E6C9", "startPos": 5172, "endPos": 5198, "beforeText": " real \ndancing ability of the stars) were in line with the overall spastic energy and momentum of the film. The \nsoundtrack is diabolically good, and ", "extractionText": "the choreography excellent", "afterText": ". There is even a cameo as a \nmustached bartender from Daniel \u201cCloud\u201d Campos, probably the best dancer in the world, who \nhelped Jackman train for the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The choreography</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">excellent</span>}</div>"}, {"index": 22, "class": "opinion_statement", "text": "the period setting is superb", "color": "#C8E6C9", "startPos": 5355, "endPos": 5383, "beforeText": " is even a cameo as a \nmustached bartender from Daniel \u201cCloud\u201d Campos, probably the best dancer in the world, who \nhelped Jackman train for the part. ", "extractionText": "The period setting is superb", "afterText": " (and I am a sucker for a good period \npiece). \nThe Greatest Showman is thus loads of fun. It\u2019s energetic, it\u2019s uplifting, it has great music and grea", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The period setting</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">superb</span>}</div>"}, {"index": 23, "class": "opinion_statement", "text": "loads of fun", "color": "#C8E6C9", "startPos": 5460, "endPos": 5472, "beforeText": "rld, who \nhelped Jackman train for the part. The period setting is superb (and I am a sucker for a good period \npiece). \nThe Greatest Showman is thus ", "extractionText": "loads of fun", "afterText": ". It\u2019s energetic, it\u2019s uplifting, it has great music and great \nsequences. It is also hagiographic revisionism, to be sure, that avoids engaging with ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Greatest Showman</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">loads of fun</span>}</div>"}, {"index": 24, "class": "opinion_statement", "text": "It\u2019s energetic, it\u2019s uplifting, it has great music and great sequences", "color": "#C8E6C9", "startPos": 5474, "endPos": 5545, "beforeText": "ed Jackman train for the part. The period setting is superb (and I am a sucker for a good period \npiece). \nThe Greatest Showman is thus loads of fun. ", "extractionText": "It\u2019s energetic, it\u2019s uplifting, it has great music and great \nsequences", "afterText": ". It is also hagiographic revisionism, to be sure, that avoids engaging with the reality of \nBarnum\u2019s life in any meaningful way. I felt this was a mi", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">It</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">energetic, uplifting, great music and great sequences</span>}</div>"}, {"index": 25, "class": "opinion_statement", "text": "It is also hagiographic revisionism, to be sure, that avoids engaging with the reality of Barnum\u2019s life in any meaningful way", "color": "#C8E6C9", "startPos": 5547, "endPos": 5673, "beforeText": "ucker for a good period \npiece). \nThe Greatest Showman is thus loads of fun. It\u2019s energetic, it\u2019s uplifting, it has great music and great \nsequences. ", "extractionText": "It is also hagiographic revisionism, to be sure, that avoids engaging with the reality of \nBarnum\u2019s life in any meaningful way", "afterText": ". I felt this was a missed opportunity, especially since we are \ncurrently living in an age where a huckster embodying many of the same traits that ma", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">It</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">hagiographic revisionism, avoids engaging with the reality</span>}</div>"}, {"index": 26, "class": "audience_impact", "text": "I felt this was a missed opportunity", "color": "#D2E3FC", "startPos": 5675, "endPos": 5711, "beforeText": "and great \nsequences. It is also hagiographic revisionism, to be sure, that avoids engaging with the reality of \nBarnum\u2019s life in any meaningful way. ", "extractionText": "I felt this was a missed opportunity", "afterText": ", especially since we are \ncurrently living in an age where a huckster embodying many of the same traits that made Barnum \nlegendary has defrauded his", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">disappointment</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The film avoiding the controversy and the interesting bits in order to give us a paint-by-numbers protagonist</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">I</span>}</div>"}, {"index": 27, "class": "opinion_statement", "text": "amazing how little some fundamental aspects of American society have changed over the centuries", "color": "#C8E6C9", "startPos": 5969, "endPos": 6065, "beforeText": "t made Barnum \nlegendary has defrauded his way into the White House by selling the American people the same kind \nof bunkum that Barnum peddled. It\u2019s ", "extractionText": "amazing how little some fundamental aspects of American \nsociety have changed over the centuries", "afterText": ", how we are still susceptible to manipulative hustlers as long \nas they conceal their true intent under a veneer of compelling showmanship. We love t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">fundamental aspects of American society</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">amazing how little... have changed</span>}</div>"}, {"index": 28, "class": "opinion_statement", "text": "we are still susceptible to manipulative hustlers", "color": "#C8E6C9", "startPos": 6071, "endPos": 6120, "beforeText": " same kind \nof bunkum that Barnum peddled. It\u2019s amazing how little some fundamental aspects of American \nsociety have changed over the centuries, how ", "extractionText": "we are still susceptible to manipulative hustlers", "afterText": " as long \nas they conceal their true intent under a veneer of compelling showmanship. We love to swallow that \nbullshit as long as it\u2019s shiny enough, ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">American society</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">susceptible to manipulative hustlers</span>}</div>"}, {"index": 29, "class": "opinion_statement", "text": "We love to swallow that bullshit as long as it\u2019s shiny enough", "color": "#C8E6C9", "startPos": 6206, "endPos": 6268, "beforeText": "centuries, how we are still susceptible to manipulative hustlers as long \nas they conceal their true intent under a veneer of compelling showmanship. ", "extractionText": "We love to swallow that \nbullshit as long as it\u2019s shiny enough", "afterText": ", and indeed even I found myself willing to more or less ignore the \nfilm\u2019s distortions of the truth because it entertained the hell out of me for two", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">American society</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">love to swallow that bullshit</span>}</div>"}, {"index": 30, "class": "audience_impact", "text": "I found myself willing to more or less ignore the film\u2019s distortions of the truth because it entertained the hell out of me for two hours", "color": "#D2E3FC", "startPos": 6286, "endPos": 6424, "beforeText": "y conceal their true intent under a veneer of compelling showmanship. We love to swallow that \nbullshit as long as it\u2019s shiny enough, and indeed even ", "extractionText": "I found myself willing to more or less ignore the \nfilm\u2019s distortions of the truth because it entertained the hell out of me for two hours", "afterText": ". This peculiar\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\nweakness of the American mind to ignore uncomfortable truths as long as we are being dazzled and \nentertained and ", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">entertained, distracted</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">the film&#x27;s entertainment value</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the reviewer</span>}</div>"}, {"index": 31, "class": "opinion_statement", "text": "peculiar weakness of the American mind to ignore uncomfortable truths as long as we are being dazzled and entertained and stupefied", "color": "#C8E6C9", "startPos": 6431, "endPos": 6439, "beforeText": "even I found myself willing to more or less ignore the \nfilm\u2019s distortions of the truth because it entertained the hell out of me for two hours. This ", "extractionText": "peculiar", "afterText": "\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\nweakness of the American mind to ignore uncomfortable truths as long as we are being dazzled and \nentertained and stupefied \u2014 THA", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the American mind</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">peculiar weakness</span>}</div>"}, {"index": 32, "class": "opinion_statement", "text": "THAT would have been a really interesting road for the film to explore", "color": "#C8E6C9", "startPos": 6586, "endPos": 6656, "beforeText": "iar\n&quot;&quot;&quot;\n\n**Page 3**\n&quot;&quot;&quot;\nweakness of the American mind to ignore uncomfortable truths as long as we are being dazzled and \nentertained and stupefied \u2014 ", "extractionText": "THAT would have been a really interesting road for the film to explore", "afterText": ". \nBut alas, it did not and in the end we just have to content ourselves with hearing \u201cThis is Me\u201d played on \nthe radio every twenty fucking minutes f", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">an alternative narrative path</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">really interesting road</span>}</div>"}, {"index": 33, "class": "opinion_statement", "text": "alas, it did not", "color": "#C8E6C9", "startPos": 6663, "endPos": 6679, "beforeText": " truths as long as we are being dazzled and \nentertained and stupefied \u2014 THAT would have been a really interesting road for the film to explore. \nBut ", "extractionText": "alas, it did not", "afterText": " and in the end we just have to content ourselves with hearing \u201cThis is Me\u201d played on \nthe radio every twenty fucking minutes for the rest of our live", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">did not explore</span>}</div>"}, {"index": 34, "class": "opinion_statement", "text": "in the end we just have to content ourselves with hearing \u201cThis is Me\u201d played on the radio every twenty fucking minutes for the rest of our lives", "color": "#C8E6C9", "startPos": 6684, "endPos": 6830, "beforeText": " are being dazzled and \nentertained and stupefied \u2014 THAT would have been a really interesting road for the film to explore. \nBut alas, it did not and ", "extractionText": "in the end we just have to content ourselves with hearing \u201cThis is Me\u201d played on \nthe radio every twenty fucking minutes for the rest of our lives", "afterText": ".\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the film&#x27;s conclusion</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">content ourselves with hearing &#x27;This is Me&#x27; played on the radio</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
